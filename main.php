@@ -1,10 +1,10 @@
 <?php
 /**
- * DokuWiki Starter Template
+ * DokuWiki meep Template
  *
- * @link     http://dokuwiki.org/template:starter
- * @author   Anika Henke <anika@selfthinker.org>
- * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @link     https://github.com/battlemidget/meep-theme-dokuwiki
+ * @author   Adam Stokes <adam.stokes@ubuntu.com>
+ * @license  MIT
  */
 
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */

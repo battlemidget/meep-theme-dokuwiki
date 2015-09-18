@@ -2,9 +2,9 @@
 /**
  * DokuWiki Image Detail Page
  *
- * @author   Andreas Gohr <andi@splitbrain.org>
- * @author   Anika Henke <anika@selfthinker.org>
- * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @link     https://github.com/battlemidget/meep-theme-dokuwiki
+ * @author   Adam Stokes <adam.stokes@ubuntu.com>
+ * @license  MIT
  */
 
 // must be run from within DokuWiki
@@ -21,7 +21,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         <?php echo hsc(tpl_img_getTag('IPTC.Headline',$IMG))?>
         [<?php echo strip_tags($conf['title'])?>]
     </title>
-    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders()?>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
@@ -29,7 +28,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 </head>
 
 <body>
-    <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
     <div id="dokuwiki__detail" class="<?php echo tpl_classes(); ?>">
         <?php html_msgarea() ?>
 
