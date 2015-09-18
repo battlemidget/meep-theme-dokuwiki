@@ -29,9 +29,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 </head>
 
 <body>
-    <?php /* the "dokuwiki__top" id is needed somewhere at the top, because that's where the "back to top" button/link links to */ ?>
-    <?php /* tpl_classes() provides useful CSS classes; if you choose not to use it, the 'dokuwiki' class at least
-             should always be in one of the surrounding elements (e.g. plugins and templates depend on it) */ ?>
     <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php
         echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>

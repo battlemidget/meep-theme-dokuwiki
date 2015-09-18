@@ -9,7 +9,6 @@ ASSETDIR=_src
 
 # VENDOR
 CSS=(
-    bower_components/normalize-css/normalize.css
     $ASSETDIR/css/base.css
 )
 
