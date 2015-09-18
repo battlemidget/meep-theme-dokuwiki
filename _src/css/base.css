@@ -1,0 +1,9 @@
+body {
+    font-size: responsive 12px 21px;
+}
+
+a {
+    @link-colors #0066ac {
+        hover: #0093f9;
+    }
+}

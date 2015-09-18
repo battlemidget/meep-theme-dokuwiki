@@ -1,0 +1,38 @@
+#!/bin/bash
+
+UGLIFY=./node_modules/.bin/uglifyjs
+CSSMIN=./node_modules/.bin/uglifycss
+POSTCSS=./node_modules/.bin/postcss
+
+# Directories
+ASSETDIR=_src
+
+# VENDOR
+CSS=(
+    bower_components/normalize-css/normalize.css
+    $ASSETDIR/css/base.css
+)
+
+JS=(
+    bower_components/jquery/dist/jquery.js
+    $ASSETDIR/js/base.js
+)
+
+echo "Running postcss"
+$POSTCSS -u precss \
+         -u cssnext \
+         -u cssnano \
+         -u postcss-responsive-type \
+         -u postcss-pxtorem \
+         -u postcss-all-link-colors \
+         -d css $ASSETDIR/css/*.css
+
+echo "Copying styles"
+cat "${CSS[@]}" > css/meep.css
+$CSSMIN css/*.css > css/meep.min.css
+
+echo "Writing javascript files..."
+$UGLIFY "${JS[@]}" -o js/meep.min.js
+
+echo "Done"
+exit 0
