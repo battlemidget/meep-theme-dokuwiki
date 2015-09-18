@@ -9,11 +9,10 @@ ASSETDIR=_src
 
 # VENDOR
 CSS=(
-    $ASSETDIR/css/base.css
+    css/base.css
 )
 
 JS=(
-    bower_components/jquery/dist/jquery.js
     $ASSETDIR/js/base.js
 )
 
@@ -28,7 +27,7 @@ $POSTCSS -u precss \
 
 echo "Copying styles"
 cat "${CSS[@]}" > css/meep.css
-$CSSMIN css/*.css > css/meep.min.css
+$CSSMIN css/meep.css > css/meep.min.css
 
 echo "Writing javascript files..."
 $UGLIFY "${JS[@]}" -o js/meep.min.js
