@@ -26,8 +26,7 @@ $POSTCSS -u precss \
          -d css $ASSETDIR/css/*.css
 
 echo "Copying styles"
-cat "${CSS[@]}" > css/meep.css
-$CSSMIN css/meep.css > css/meep.min.css
+cat "${CSS[@]}" | $CSSMIN > css/meep.min.css
 
 echo "Writing javascript files..."
 $UGLIFY "${JS[@]}" -o js/meep.min.js
